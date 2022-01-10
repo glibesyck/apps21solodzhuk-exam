@@ -5,7 +5,7 @@ package json;
  */
 
 public class JsonNull extends Json {
-    private final String nullString = "null";
+    private final static String nullString = "null";
 
     @Override
     public String toJson() {

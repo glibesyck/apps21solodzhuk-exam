@@ -23,7 +23,8 @@ public class JsonObject extends Json {
     }
     private String getJsonObjectBody() {
         StringBuilder jsonStr = new StringBuilder();
-        Iterator<Map.Entry<String, Json>> jsonIterator = data.entrySet().iterator();
+        Iterator<Map.Entry<String, Json>> jsonIterator = data.entrySet()
+                .iterator();
         while (jsonIterator.hasNext()) {
             Map.Entry<String, Json> jsonEntry = jsonIterator.next();
             jsonStr.append(jsonEntry.getKey());

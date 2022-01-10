@@ -18,11 +18,11 @@ public class Student extends BasicStudent {
         for (Tuple<String, Integer> exam: exams) {
             JsonObject jsonExam = new JsonObject(
                     new JsonPair("course"
-                            , new JsonString(exam.key)),
+                            ,new JsonString(exam.key)),
                     new JsonPair("mark"
-                            , new JsonNumber(exam.value)),
+                            ,new JsonNumber(exam.value)),
                     new JsonPair("passed"
-                            , new JsonBoolean(exam.value < badMark ? false : true)));
+                            ,new JsonBoolean(exam.value < badMark ? false : true)));
             jsonList.add(jsonExam);
         }
         this.exams = new JsonArray(jsonList.toArray(new Json[0]));
